@@ -34,7 +34,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-2.5" aria-label={`${site.name}, inicio`}>
           <Image
-            src="/brand/isotipo.png"
+            src="/brand/isotipo-violeta.png"
             alt=""
             width={36}
             height={36}

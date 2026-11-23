@@ -8,14 +8,16 @@ export default function Footer() {
     <footer className="relative border-t border-white/5 bg-night-2">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Image
-            src="/brand/logo-kaiju-code.png"
-            alt={`${site.name}, ${site.tagline}`}
-            width={150}
-            height={180}
-            className="h-auto w-[130px]"
-          />
-          <p className="mt-4 max-w-sm text-sm text-muted">{site.description}</p>
+          <div className="flex items-center gap-4">
+            <Image src="/brand/emblema.png" alt="" width={398} height={460} className="h-auto w-[84px]" />
+            <div>
+              <p className="font-display text-2xl font-bold tracking-tight">
+                Kaiju <span className="text-gradient">Code</span>
+              </p>
+              <p className="font-serif text-sm italic text-violet-light">{site.tagline}</p>
+            </div>
+          </div>
+          <p className="mt-5 max-w-sm text-sm text-muted">{site.description}</p>
         </div>
         <div>
           <p className="eyebrow">Navegación</p>

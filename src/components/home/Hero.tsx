@@ -67,12 +67,12 @@ export default function Hero() {
           <div className="absolute inset-[-6%] animate-[spin_40s_linear_infinite] rounded-full border border-dashed border-cyan/20" />
           <div className="relative h-full w-full animate-float p-[10%]">
             <Image
-              src="/brand/isotipo.png"
+              src="/brand/isotipo-violeta.png"
               alt="Isotipo de Kaiju Code: un yin-yang de circuitos con la garra del dragón"
               width={512}
               height={512}
               priority
-              className="h-full w-full drop-shadow-[0_0_40px_rgba(123,44,191,0.55)]"
+              className="h-full w-full drop-shadow-[0_0_40px_rgba(0,245,212,0.25)]"
             />
           </div>
         </motion.div>

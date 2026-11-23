@@ -19,7 +19,7 @@ export default function Founder() {
               />
             ) : (
               <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center text-muted">
-                <Image src="/brand/isotipo.png" alt="" width={96} height={96} className="opacity-70" />
+                <Image src="/brand/isotipo-violeta.png" alt="" width={96} height={96} className="opacity-70" />
                 <span className="text-xs">Foto de perfil próximamente</span>
               </div>
             )}
