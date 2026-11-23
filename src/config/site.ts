@@ -12,11 +12,10 @@ export const site = {
   // Se usa para metadata, Open Graph y sitemap. Definilo en NEXT_PUBLIC_SITE_URL al deployar.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   // Número en formato internacional, sin "+", espacios ni guiones. Ej: 5491112345678
-  // TODO(Martín): reemplazar por tu número real o definir NEXT_PUBLIC_WHATSAPP_NUMBER.
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5490000000000",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5491138666884",
   whatsappMessage: "¡Hola Kaiju Code! Vi su web y quiero consultar por un proyecto.",
-  // TODO(Martín): tu mail público de contacto.
-  email: "hola@kaijucode.dev",
+  // Mail público de contacto.
+  email: "martincazorlasota@gmail.com",
   location: "Argentina · Trabajo remoto para todo LATAM",
   socials: [
     // TODO(Martín): completá tus redes. Las que tengan href vacío no se muestran.
@@ -134,8 +133,7 @@ export const testimonials: Testimonial[] = [
 export const founder = {
   name: "Martín Cazorla",
   role: "Fundador y desarrollador Full Stack",
-  // TODO(Martín): cuando tengas la foto, guardala como public/brand/fundador.jpg y poné photo: "/brand/fundador.jpg".
-  photo: null as string | null,
+  photo: "/brand/fundador.jpg" as string | null,
   bio: [
     "Detrás de Kaiju Code hay un desarrollador Full Stack que se ocupa de todo el proyecto: desde entender tu negocio hasta poner el sistema en producción.",
     "Sin intermediarios ni pases de mano: hablás directo con quien escribe el código, y eso se nota en los tiempos y en el resultado.",
