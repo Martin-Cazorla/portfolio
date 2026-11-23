@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* Paleta Kaiju Code: editá los colores acá y se aplican en todo el sitio. */
+@theme {
+  --color-night: #121212;
+  --color-night-2: #17151c;
+  --color-night-3: #201d27;
+  --color-violet: #7b2cbf;
+  --color-violet-light: #c77dff;
+  --color-cyan: #00f5d4;
+  --color-ink: #ececf1;
+  --color-muted: #a3a1ad;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-glow: glow 4s ease-in-out infinite;
+  --animate-float: float 7s ease-in-out infinite;
+
+  @keyframes glow {
+    0%,
+    100% {
+      opacity: 0.55;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.08);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-night);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-violet) 70%, transparent);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(90deg, var(--color-violet-light), var(--color-cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .card {
+    border: 1px solid rgb(255 255 255 / 0.08);
+    background: linear-gradient(180deg, rgb(255 255 255 / 0.04), rgb(255 255 255 / 0.015));
+    border-radius: 1.25rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.8rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, var(--color-violet), #9d4edd);
+    color: white;
+    box-shadow: 0 0 0 1px rgb(199 125 255 / 0.35), 0 10px 30px -10px rgb(123 44 191 / 0.8);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 0 1px rgb(199 125 255 / 0.6), 0 14px 40px -10px rgb(199 125 255 / 0.9);
+  }
+  .btn-ghost {
+    border: 1px solid rgb(0 245 212 / 0.45);
+    color: var(--color-cyan);
+  }
+  .btn-ghost:hover {
+    background: rgb(0 245 212 / 0.08);
+    box-shadow: 0 0 24px -6px rgb(0 245 212 / 0.6);
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-cyan);
+  }
+
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    background: rgb(255 255 255 / 0.03);
+    padding: 0.7rem 0.9rem;
+    color: var(--color-ink);
+    transition: border-color 0.2s;
+  }
+  .field::placeholder {
+    color: rgb(163 161 173 / 0.7);
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-violet-light);
+    box-shadow: 0 0 0 3px rgb(199 125 255 / 0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
